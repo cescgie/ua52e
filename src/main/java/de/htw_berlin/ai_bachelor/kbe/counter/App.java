@@ -6,5 +6,9 @@ public class App
     {
         System.out.println( "Hello World!" );
         Counter c = CounterFactory.getCounterInstance("simple");
+        c.increment();
+        c.increment();
+        
+        System.out.println("CounterSimple = " +c.getCounter());
     }
 }
