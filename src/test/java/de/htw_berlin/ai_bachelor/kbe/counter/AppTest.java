@@ -15,4 +15,20 @@ public class AppTest{
 		c.increment();
 		assertTrue(c.getCounter()==3);
 	} 
+	@Test //annotation
+ 	public void testCounterDouble(){
+		Counter c = CounterFactory.getCounterInstance("double");
+		c.increment();
+		c.increment();
+		c.increment();
+		assertTrue(c.getCounter()==6);
+	} 
+	@Test //annotation
+ 	public void testCounterTriple(){
+		Counter c = CounterFactory.getCounterInstance("triple");
+		c.increment();
+		c.increment();
+		c.increment();
+		assertTrue(c.getCounter()==9);
+	} 
 }
