@@ -10,5 +10,11 @@ public class App
         c.increment();
         
         System.out.println("CounterSimple = " +c.getCounter());
+        
+        Counter c2 = CounterFactory.getCounterInstance("double");
+        c2.increment();
+        c2.increment();
+        
+        System.out.println("CounterDouble = " +c2.getCounter());
     }
 }
