@@ -4,24 +4,26 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        System.out.println( "Counter" );
+        System.out.println( "=================" );
+        
         Counter c = CounterFactory.getCounterInstance("simple");
-        c.increment();
-        c.increment();
+        c.increment(); //0+1=1
+        c.increment(); //1+1=2
         
         System.out.println("CounterSimple = " +c.getCounter());
         //Ausgabe: "CounterSimple = 2"
         
         Counter c2 = CounterFactory.getCounterInstance("double");
-        c2.increment();
-        c2.increment();
+        c2.increment(); //2+2=2
+        c2.increment(); //4+2=6
         
         System.out.println("CounterDouble = " +c2.getCounter());
         //Ausgabe: "CounterDouble = 4"
         
         Counter c3 = CounterFactory.getCounterInstance("triple");
-        c3.increment();
-        c3.increment();
+        c3.increment(); //3+3=6
+        c3.increment(); //6+3=9
         
         System.out.println("CounterTriple = " +c3.getCounter());
         //Ausgabe: "CounterDouble = 6"
